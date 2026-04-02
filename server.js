@@ -10,6 +10,9 @@ const PORT = 3000;
 // Middleware
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors());
+
 // JWT Authentication Middleware
 function requireAuth(req, res, next) {
     const authHeader = req.headers.authorization;
